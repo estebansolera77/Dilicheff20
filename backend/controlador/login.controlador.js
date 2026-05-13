@@ -16,9 +16,9 @@ router.post('/registro', async (req, res) => {
 // Login
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.body); // agrega esto
+    console.log(req.body); 
     const usuario = await service.iniciarSesion(req.body);
-    console.log(usuario); // y esto
+    console.log(usuario); 
     
     if (!usuario) {
       return res.status(401).send('Credenciales incorrectas');
