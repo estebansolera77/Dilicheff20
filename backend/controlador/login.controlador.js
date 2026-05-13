@@ -16,9 +16,9 @@ router.post('/registro', async (req, res) => {
 // Login
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.body); 
+    console.log(req.body); //agrega esto
     const usuario = await service.iniciarSesion(req.body);
-    console.log(usuario); 
+    console.log(usuario);//y esto, te sirve para ver que errores tienes en la terminal o sea si los datos estan entrando bien o no
     
     if (!usuario) {
       return res.status(401).send('Credenciales incorrectas');
